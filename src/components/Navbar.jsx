@@ -1,12 +1,13 @@
-import { Link } from "react-router"
+import { Link, Outlet } from "react-router"
 
 export default function Navbar(){
     return(
         <>
         <h3>blogAPI</h3>
-        <Link to="/home">Home</Link>
-        <Link to="/blog/sign-up">sign up</Link>
+        <Link to="/">Home</Link>
+        <Link to="/sign-up">sign up</Link>
         <Link to="/login">login</Link>
+        <Outlet/> 
         </>
     )
 }
