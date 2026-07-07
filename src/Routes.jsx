@@ -1,17 +1,18 @@
-import { Children } from "react";
-import App from "./App";
 import SignUp from "./pages/SignUp";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Layout from "./components/Layout";
+import Comments from "./components/Comments";
 
 export const routes = [
   {
     path: "/",
-    element: <App />,
+    element: <Layout />,
     children: [
-      { index: "/", element: <Home /> },
+      { index: true, element: <Home /> },
       { path: "sign-up", element: <SignUp /> },
       { path: "login", element: <Login /> },
+      { path: "comments", element: <Comments /> },
     ],
   },
 ];

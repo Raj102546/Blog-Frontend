@@ -1,13 +1,14 @@
-import { Link, Outlet } from "react-router"
+import { Link, Outlet } from "react-router";
+import { useState } from "react";
 
-export default function Navbar(){
-    return(
-        <>
-        <h3>blogAPI</h3>
-        <Link to="/">Home</Link>
-        <Link to="/sign-up">sign up</Link>
-        <Link to="/login">login</Link>
-        <Outlet/> 
-        </>
-    )
+export default function Navbar() {
+  return (
+    <>
+      <h3>blogAPI</h3>
+      <Link to="/">Home</Link>
+      <Link to="/sign-up">sign up</Link>
+      <Link to="/login">login</Link>
+      <Link to="/comments">comments</Link>
+    </>
+  );
 }

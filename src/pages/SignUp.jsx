@@ -1,7 +1,8 @@
 import { useState } from "react";
-const API_URL = import.meta.env.VITE_API_URL;
+import { useAuthContext } from "../AuthContext";
 
 export default function SignUp() {
+  const { API_URL } = useAuthContext()
   const [credentials, setCredentials] = useState({
     firstName: "",
     lastName: "",
