@@ -7,15 +7,22 @@ export default function Comments() {
   const [comments, setComments] = useState([]);
 
   const handleAddComments = async () => {
+    if (!token) {
+      console.log("You must be logged in to comment");
+      return;
+    }
     try {
       const res = await fetch(`${API_URL}/comments`, {
         method: "POST",
         headers: {
-          "Context-Type": "application/json",
+          "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({ msg: "comments" }),
       });
+      if (!res.ok) {
+        throw new Error("Failed to add comment");
+      }
       const data = await res.json();
       setComments([...comments, data]);
     } catch (error) {

@@ -9,6 +9,7 @@ export default function Navbar() {
       <Link to="/sign-up">sign up</Link>
       <Link to="/login">login</Link>
       <Link to="/comments">comments</Link>
+      <Link to="/posts">posts</Link>
     </>
   );
 }

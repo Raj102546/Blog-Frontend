@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Layout from "./components/Layout";
 import Comments from "./components/Comments";
+import Posts from "./components/Posts";
 
 export const routes = [
   {
@@ -13,6 +14,7 @@ export const routes = [
       { path: "sign-up", element: <SignUp /> },
       { path: "login", element: <Login /> },
       { path: "comments", element: <Comments /> },
+      { path: "posts", element: <Posts /> },
     ],
   },
 ];

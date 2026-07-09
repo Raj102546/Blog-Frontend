@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { useAuthContext } from "../AuthContext";
+import { AuthContext, useAuthContext } from "../AuthContext";
 
 export default function SignUp() {
-  const { API_URL } = useAuthContext()
+  const { API_URL } = useAuthContext();
   const [credentials, setCredentials] = useState({
     firstName: "",
     lastName: "",
@@ -102,6 +102,8 @@ export default function SignUp() {
         />
         <button type="submit">Sign Up</button>
       </form>
+      <AuthContext.Provider value={{ credentials }}>
+      </AuthContext.Provider>
     </>
   );
 }
