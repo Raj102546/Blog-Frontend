@@ -14,7 +14,7 @@ export const routes = [
       { path: "sign-up", element: <SignUp /> },
       { path: "login", element: <Login /> },
       { path: "comments", element: <Comments /> },
-      { path: "posts", element: <Posts /> },
+      { path: "posts", element: <Posts />, children:[] },
     ],
   },
 ];
