@@ -26,7 +26,9 @@ export default function Home() {
     fetchPosts();
   }, [API_URL]);
 
-  const [featured, ...rest] = posts;
+  const publishedPosts = posts.filter(post => post.published);
+
+  const [featured, ...rest] = publishedPosts;
 
   console.log(posts);
   return (

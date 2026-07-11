@@ -51,14 +51,6 @@ export default function Posts() {
     setNewPosts({ title: "", content: "", published: false });
   };
 
-  const handleDeletePost = async()=>{
-    try {
-      const res = await fetch()
-    } catch (error) {
-      
-    }
-  }
-
   const handlePosts = async (e) => {
     e.preventDefault();
     console.log("button clicked");
@@ -223,7 +215,7 @@ export default function Posts() {
           {myPosts.map((post) => (
             <li key={post.id}>
               <Link
-                to={`/posts/${post.id}`}
+                to={`/editPosts/${post.id}`}
                 className="group flex flex-col justify-between gap-1 py-5 sm:flex-row sm:items-baseline sm:gap-6"
               >
                 <h3 className="font-serif text-lg font-medium text-stone-900 transition group-hover:text-emerald-800">
