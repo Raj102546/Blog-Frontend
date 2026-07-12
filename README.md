@@ -2,7 +2,7 @@
 
 The frontend for **blogAPI**, a full-stack blogging platform where authors can publish posts and readers can log in to comment. Built with React, React Router, and Tailwind CSS, and backed by a separate Express + PostgreSQL API.
 
-**Live demo:** [your-vercel-url-here](#)
+**Live demo:** [https://blog-frontend-eta-lac.vercel.app](#)
 **Backend repo:** [Blog-Backend](https://github.com/Raj102546/Blog-Backend)
 
 ---
@@ -42,7 +42,7 @@ npm install
 Create a `.env` file in the project root:
 
 ```env
-VITE_API_URL=http://localhost:5000/blog
+VITE_API_URL=http://localhost:5000
 ```
 
 Point this at your backend's URL — update it to your deployed backend's URL in production.
