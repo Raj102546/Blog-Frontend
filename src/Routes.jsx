@@ -2,8 +2,8 @@ import SignUp from "./pages/SignUp";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Layout from "./components/Layout";
-import Posts from "./components/Posts";
-import EditPost from "./pages/EditPost";
+import Posts from "./pages/Posts";
+import EditPost from "./components/EditPost";
 import OpenPost from "./pages/OpenPost";
 
 export const routes = [
