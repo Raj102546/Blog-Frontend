@@ -4,7 +4,7 @@ import { useParams, Link, useNavigate } from "react-router";
 
 export default function EditPost() {
   const navigation = useNavigate();
-  const { token, loggedUser, API_URL, credentials } = useAuthContext();
+  const { token, API_URL } = useAuthContext();
   const { id } = useParams();
   const [post, setPost] = useState();
   const [editPost, setEditPost] = useState();
@@ -44,7 +44,7 @@ export default function EditPost() {
     e.preventDefault();
     const res = await fetch(`${API_URL}/${id}/editPost`, {
       method: "POST",
-      headers: { "Content-Type": "application/json", Authorization: token },
+      headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
       body: JSON.stringify(editPost),
     });
     if (!res.ok) {
@@ -58,9 +58,9 @@ export default function EditPost() {
   const handleDeletePost = async () => {
     try {
       const res = await fetch(`${API_URL}/${id}/deletePost`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Authorization: token },
-        body: JSON.stringify({ message: "Post Deleted" }),
+        method: "DELETE",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+        body: JSON.stringify({postId : id}),
       });
       if (!res.ok) {
         console.log("failed");

@@ -1,12 +1,12 @@
 import { useAuthContext } from "../AuthContext";
-import Comments from "../components/Comments";
 import Posts from "../components/Posts";
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
 
 export default function Home() {
-    const {API_URL} = useAuthContext()
-  const [ posts, setPosts ] = useState([]);
+  const { API_URL } = useAuthContext();
+  const [posts, setPosts] = useState([]);
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -26,7 +26,7 @@ export default function Home() {
     fetchPosts();
   }, [API_URL]);
 
-  const publishedPosts = posts.filter(post => post.published);
+  const publishedPosts = posts.filter((post) => post.published);
 
   const [featured, ...rest] = publishedPosts;
 
