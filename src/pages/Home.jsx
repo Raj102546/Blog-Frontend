@@ -1,5 +1,4 @@
 import { useAuthContext } from "../AuthContext";
-import Posts from "../components/Posts";
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
 
